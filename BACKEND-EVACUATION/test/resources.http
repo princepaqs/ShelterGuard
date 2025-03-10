@@ -1,0 +1,58 @@
+### Get all resources
+GET http://localhost:8000/get-resources
+Content-Type: application/json
+
+### Get all users
+GET http://localhost:8000/get-users
+Content-Type: application/json
+
+### Get all calamities
+GET http://localhost:8000/get-calamities
+Content-Type: application/json
+
+### Get all evacuation centers
+GET http://localhost:8000/get-evacuationcenters
+Content-Type: application/json
+
+### GET ALL CALAMITIES
+GET http://localhost:8000/centers
+Content-Type: application/json
+
+### User login
+POST http://localhost:8000/login-user
+Content-Type: application/json
+
+{
+    "username": "pri",
+    "password": "pri"
+}
+
+### Get One Evacuee
+GET http://localhost:8000/evacuees/67cd743262b3f5b5dcbc6f9e
+Content-Type: application/json
+
+### Get evacuee
+GET http://localhost:8000/evacuees/evacuee/67cd743262b3f5b5dcbc6f9e
+Content-Type: application/json
+
+### Assign evacuee
+POST http://localhost:8000/assignment/evacuees
+Content-Type: application/json
+
+{
+  "evacuee": "67c30ccaca47b49375f81867",
+  "center": "67a6df0666f8f210ea10bba8", 
+  "resourcesAccepted": [
+    {
+      "resource": "67a6df8966f8f210ea10bd1e", 
+      "quantity": 1
+    }
+  ],
+    "health": {
+      "isWounded": false,
+      "woundDescription": "",
+      "isCritical": false,
+      "medicalNeeds": ""
+    }
+  }
+}
